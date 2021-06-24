@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+/*공용 변수*/
+$id-color: rgb(247,169,65);
+$id-color-v2: rgb(230,160,66);
+$border-color: rgb(220,220,220);
+$border-color-v2: rgb(230,230,230);
+$border-color-v3: rgb(240,240,240);
+$point-color: rgb(247,87,66);
+
+$sub-color: rgb(22,134,226);
+$link-color: rgb(43, 134, 204);
+$line-color: rgb(179, 179, 179);
+
+
+$buy-bg-color: rgb(210,83,73);
+$sell-bg-color: rgb(32,109,206);
+
+@mixin absPosition ($top: auto, $right: auto, $bottom: auto, $left: auto){
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin prefix($name, $value) {
+  -webkit-#{$name}: $value;
+  -moz-#{$name}: $value;
+  -ms-#{$name}: $value;
+  #{$name}: $value;
+}
+@mixin inline-block{
+  display:inline-block;
+  *zoom:1;
+  *display:inline;
+}
+@mixin clear-both{
+  content:'';
+  display:table;
+  clear:both;
+}
+@mixin hide-text{
+  text-indent: -9999px;
+  text-shadow:none;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;;
+}
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin gradient($from-color, $to-color) {
+    background-color: mix($from-color, $to-color); /* Fallback */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from-color), to($to-color));
+    background-image: -webkit-linear-gradient(top, $from-color, $to-color);
+    background-image:    -moz-linear-gradient(top, $from-color, $to-color);
+    background-image:     -ms-linear-gradient(top, $from-color, $to-color);
+    background-image:      -o-linear-gradient(top, $from-color, $to-color);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$from-color', EndColorStr='$to-color')";
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+
+@mixin transition($property: all, $duration: 0.2s, $timing: linear) {
+  -webkit-transition: #{$property} $duration $timing;
+  -moz-transition: #{$property} $duration $timing;
+  -ms-transition: #{$property} $duration $timing;
+  transition: $property $duration $timing;
+}
+@mixin transform($type) {
+  -webkit-transform: $type;
+  -moz-transform: $type;
+  -ms-transform: $type;
+  transform: $type;
+}
+@mixin animation($name, $timing: 0.5s) {
+  -webkit-animation: $name $timing;
+  -moz-animation: $name $timing;
+  -ms-animation: $name $timing;
+}
+
+
+@mixin printTitle {
+  font-size: 30px !important;
+  letter-spacing: -3px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/*공용 함수*/
+@function black($opacity){
+    @return rgba(0,0,0,$opacity)
+}
+@function white($opacity){
+    @return rgba(255,255,255,$opacity)
+}
