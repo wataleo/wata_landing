@@ -25,6 +25,15 @@
         position: relative;
         width: 100%;
         height: 100%;
+        a.sectionVideo__btn{
+            z-index: 2;
+            @media (max-width: 991px) {
+                left: inherit;
+                top: inherit;
+                bottom: 0;
+                right: 0;
+            }
+        }
         video{
             position: absolute;
             width: 250%;
