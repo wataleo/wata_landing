@@ -5452,9 +5452,9 @@ body.is-cursor-active * {
   transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0.06s, transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0.06s;
 }
 
-.portfolioCard.-type-2.-hover:hover .portfolioCard__img__inner {
-  transform: scale(1.08);
-}
+/* .portfolioCard.-type-2.-hover:hover .portfolioCard__img__inner {
+  transform: scale(1.05);
+} */
 
 .portfolioCard.-type-2.-hover:hover .portfolioCard__content {
   opacity: 1;

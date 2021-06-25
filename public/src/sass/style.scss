@@ -64,6 +64,55 @@
     }
 }
 
+.step01, .step02, .step03, .step04{
+    .sectionHeading__subtitle{
+        position: relative;
+        &:after{
+            font-size: 8rem;
+            font-weight: bolder;
+            color: #fff;
+            opacity: 0.1;
+            position: absolute;
+            left: -20px;
+            bottom: -100px;
+            @media (max-width: 991px){
+                bottom: -85px;
+            }
+        }
+    }
+}
+.step01{
+    .sectionHeading__subtitle{
+        &:after{
+            content: '1';
+        }
+    }
+}
+.step02{
+    .sectionHeading__subtitle{
+        &:after{
+            content: '2';
+        }
+    }
+}
 
+.step03{
+    .sectionHeading__subtitle{
+        &:after{
+            content: '3';
+        }
+    }
+}
 
+.step04{
+    .col-md-6{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .sectionHeading__subtitle{
+        &:after{
+            content: '4';
+        }
+    }
+}
 

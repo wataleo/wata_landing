@@ -2344,6 +2344,7 @@ function videoBtn() {
 
   GLightbox({
     autoplayVideos: false,
+    touchNavigation: false,
   });
 
 }
