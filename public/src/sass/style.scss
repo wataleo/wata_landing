@@ -32,6 +32,7 @@
                 top: inherit;
                 bottom: 0;
                 right: 0;
+                display: none;
             }
         }
         video{
@@ -116,3 +117,13 @@
     }
 }
 
+.btn-video{
+    display: none;
+    @media (max-width: 991px){
+        display: inline-flex;
+    }
+}
+
+.contact-us{
+    background-color: #fff;
+}
