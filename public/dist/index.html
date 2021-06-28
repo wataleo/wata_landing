@@ -1078,10 +1078,10 @@
 
 								<form class="row x-gap-40 y-gap-32 js-ajax-form" method="POST" action="contact.php"
 									data-message-success="Your message has been sent! We will reply you as soon as possible."
-									data-message-error="Something went wrong. Please contact us directly at <a href='stukram@example.com'>stukram@example.com</a>.">
+									data-message-error="Something went wrong. Please contact us directly at info@watanow.com.">
 									<div class="col-12">
 										<label class="js-input-group">
-											Name
+											Company & Name
 											<input type="text" name="name" data-required placeholder="Fill in your name">
 											<span class="form__error"></span>
 										</label>
@@ -1097,8 +1097,8 @@
 
 									<div class="col-12">
 										<label class="js-input-group">
-											Budget (optional)
-											<input type="text" name="budget" placeholder="Do you have a fixed budget?">
+											Location & Industry
+											<input type="text" name="budget" data-required placeholder="Do you have a fixed budget?">
 											<span class="form__error"></span>
 										</label>
 									</div>
@@ -1106,7 +1106,7 @@
 									<div class="col-12">
 										<label class="js-input-group">
 											Please write the details regarding your request
-											<textarea name="message" rows="1" placeholder="Project description"></textarea>
+											<textarea name="message" rows="1" data-required placeholder="Project description"></textarea>
 											<span class="form__error"></span>
 										</label>
 									</div>
